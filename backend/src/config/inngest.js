@@ -1,7 +1,11 @@
 import { Inngest } from "inngest";
 import { connectDB } from "./db.js";
 import { User } from "../models/user.model.js"; // Import the User model
-import { addUserToPublicChannels, deleteStreamUser, upsertStreamUser } from "./stream.js";
+import {
+  addUserToPublicChannels,
+  deleteStreamUser,
+  upsertStreamUser,
+} from "./stream.js";
 
 // Create a client to send and receive events
 export const inngest = new Inngest({ id: "slack-clone" });
@@ -12,7 +16,8 @@ const syncUser = inngest.createFunction(
   async ({ event }) => {
     await connectDB();
 
-    const { id, email_addresses, first_name, last_name, image_url } = event.data;
+    const { id, email_addresses, first_name, last_name, image_url } =
+      event.data;
 
     const newUser = {
       clerkId: id,
