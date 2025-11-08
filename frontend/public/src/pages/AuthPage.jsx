@@ -11,11 +11,10 @@ const AuthPage = () => {
             <span className="brand-name">SlackCord</span>
           </div>
 
-          <h1 className="hero-title">Where Work Happens ✨</h1>
+          <h1 className="hero-title">Where Stuff Happens</h1>
 
           <p className="hero-subtitle">
-            Connect with your team instantly through secure, real-time messaging. Experience
-            seamless collaboration with powerful features designed for modern teams.
+            Made by BigHard
           </p>
 
           <div className="features-list">
@@ -37,7 +36,7 @@ const AuthPage = () => {
 
           <SignInButton mode="modal">
             <button className="cta-button">
-              Get Started with Slackcord
+              Get Started with SlackCord
               <span className="button-arrow">→</span>
             </button>
           </SignInButton>
