@@ -10,7 +10,11 @@ import cors from "cors";
 import * as Sentry from "@sentry/node";
 const app = express();
 app.use(express.json());
+<<<<<<< HEAD
 app.use(cors({ origin: ENV.CLIENT_URL, credentials: true }));
+=======
+app.use(cors({ origin: ENV.CLIENT_URL.split(','), credentials: true }));
+>>>>>>> e807e4836a94b7ff1bcca3539bcfebad27bb89bc
 app.use(clerkMiddleware()); // req.auth will be available in the request object
 app.get("/debug-sentry", (req, res) => {
   throw new Error("My first Sentry error!");
